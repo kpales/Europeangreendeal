@@ -23,7 +23,11 @@ function getAddress() {
 $url=getAddress();
 //echo getAddress();
 $id = strval(substr($url, -6));
-echo 'Code is ' . $id . '//';
+echo 'Code is ' . $id . ' ';
+if ($id == 'ation/') {
+	echo 'This code has already been used';
+	die();
+}
 
 if( is_page(24)) {
 
@@ -49,7 +53,7 @@ try {
     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
 		echo $v;
 		
-		if ($v == 1 || $v == 'ation/') {
+		if ($v == 1) {
 			echo 'This code has already been used';
 			die();
 		}
