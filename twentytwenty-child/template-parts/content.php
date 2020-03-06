@@ -22,10 +22,12 @@ function getAddress() {
 }
 $url=getAddress();
 //echo getAddress();
-$id = strval(substr($url, -6));
+$needle = 'code';
+$id = substr($url, strpos($url, $needle) + strlen($needle), 6);
+//$id = strval(substr($url, -6));
 echo 'Code is ' . $id . ' ';
 if ($id == 'ation/') {
-	echo 'This code has already been used';
+	echo 'This registration link is no longer valid';
 	die();
 }
 
