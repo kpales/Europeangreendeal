@@ -20,18 +20,22 @@ function getAddress() {
    // $protocol = $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
     return 'https'.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
+
+if( is_page(24)) {
+
 $url=getAddress();
 //echo getAddress();
 $needle = 'code';
-$id = substr($url, strpos($url, $needle) + strlen($needle), 6);
-//$id = strval(substr($url, -6));
-echo 'Code is ' . $id . ' ';
-if ($id == 'ation/') {
+
+if (strpos($url, $needle) == false){
 	echo 'This registration link is no longer valid';
 	die();
 }
 
-if( is_page(24)) {
+$id = substr($url, strpos($url, $needle) + strlen($needle), 6);
+//$id = strval(substr($url, -6));
+echo 'Code is ' . $id . ' ';
+
 
 
 	class TableRows extends RecursiveIteratorIterator {
