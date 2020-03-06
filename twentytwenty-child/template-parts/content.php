@@ -24,10 +24,8 @@ function getAddress() {
 if( is_page(24)) {
 
 $url=getAddress();
-//echo getAddress();
-$needle = 'code';
 
-if (strpos($url, $needle) == false){
+if (strpos($url, "code") == false){
 	echo 'This registration link is no longer valid';
 	die();
 }
