@@ -82,6 +82,38 @@ return '';
  
 add_shortcode('not_accepted_participant_content', 'private_content1');
 
+//==============* Update Invitations table *=====*/
 
 
-?>
+add_action('frm_after_create_entry', 'copy_into_my_table', 20, 2);
+function copy_into_my_table($entry_id, $form_id){
+
+ 
+
+  if($form_id == 2){ //change 4 to the form id of the form to copy
+
+
+    $code = $_POST['item_meta'][6];
+    echo $code;
+  
+    $servername = "localhost";
+    $username = "dbo819600357";
+    $password = "rln9H78B?RtHdUqVHjwS1";
+    $dbname = "db819600357";
+
+  try {
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $stmt = $conn->prepare("UPDATE Invitations SET has_been_sent=1 WHERE code='$code' ");
+      $stmt->execute();
+  }
+  catch(PDOException $e) {
+      echo "Error: " . $e->getMessage();
+  }
+  $conn = null;
+  }
+}
+
+
+
+
