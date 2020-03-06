@@ -49,7 +49,7 @@ try {
     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
 		echo $v;
 		
-		if ($v == 1) {
+		if ($v == 1 || $v == 'ation/') {
 			echo 'This code has already been used';
 			die();
 		}
