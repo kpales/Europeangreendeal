@@ -30,7 +30,7 @@ if (strpos($url, "code") == false){
 	die();
 }
 
-$id = substr($url, strpos($url, "code") + strlen($needle), 6);
+$id = substr($url, strpos($url, "code") + strlen("code"), 6);
 //$id = strval(substr($url, -6));
 echo 'Code is ' . $id . ' ';
 
