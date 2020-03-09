@@ -58,7 +58,7 @@ if( is_page(24)) {
 			// set the resulting array to associative
 			$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 			foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-				
+				echo '<br/> code exists';
 				if ($v == 0) {
 					echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
 					echo '<span style="font-weight: 400; font-style: italic;color: #504d4d;">Dieser Registrierungslink ist ungültig.</span></h5>';
@@ -81,7 +81,7 @@ if( is_page(24)) {
 			// set the resulting array to associative
 			$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 			foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-				
+				echo '<br/> code exists but has not been used yet';
 				if ($v == 1) {
 					echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
 					echo '<span style="font-weight: 400; font-style: italic;">Dieser Registrierungslink ist ungültig.</span></h5>';
