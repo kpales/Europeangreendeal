@@ -93,7 +93,7 @@ function copy_into_my_table($entry_id, $form_id){
   if($form_id == 2){ //change 4 to the form id of the form to copy
 
 
-    $code = $_POST['item_meta'][6];
+    $code = $_POST['item_meta'][38];
     echo $code;
   
     $servername = "localhost";
