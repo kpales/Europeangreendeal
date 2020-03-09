@@ -98,8 +98,11 @@ function copy_into_my_table($entry_id, $form_id){
   
     $servername = "localhost";
     $username = "dbo819600357";
-    $password = "rln9H78B?RtHdUqVHjwS1";
-    $dbname = "db819600357";
+		$password = "rln9H78B?RtHdUqVHjwS1";
+		$dbname = "db819600357"; 
+		/*$username = "root";
+		$password = "root";
+		$dbname = "sharedhistory";*/
 
   try {
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
