@@ -82,7 +82,7 @@ if( is_page(24)) {
 			foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
 				if ($v == 1) {
 					echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-					echo '<span style="font-weight: 400; font-style: italic;">Dieser Registrierungslink ist ungültig.</span></h5>';
+					echo '<span style="font-weight: 400; font-style: italic;">Dieser Registrierungslink ist ungültig</span></h5>';
 					die();
 				}
 			}
