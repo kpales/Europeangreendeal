@@ -29,8 +29,8 @@
 						</p><!-- .footer-copyright -->
 
 						<p class="powered-by-wordpress">
-							<a target="blank" href="<?php echo esc_url( __( site_url('/imprint') ) ); ?>">Imprint</a>
-							<a target="blank" href="<?php echo esc_url( __( site_url('/privacy-cookies') ) ); ?>">Privacy Policy</a>
+							<a target="blank" href="<?php echo esc_url( __( site_url('/imprint') ) ); ?>"><?php echo get_the_title( 12 ); ?></a>
+							<a target="blank" href="<?php echo esc_url( __( site_url('/privacy-cookies') ) ); ?>"><?php echo get_the_title( 19 ); ?></a>
 						</p><!-- .powered-by-wordpress -->
 
 					</div><!-- .footer-credits -->

@@ -1,0 +1,7 @@
+.DS_Store
+
+/twentytwenty/node_modules/
+/twentytwenty/npm-debug.log/
+
+/twentytwenty-child/node_modules/
+/twentytwenty-child/npm-debug.log/
