@@ -27,7 +27,7 @@ if( is_page(24)) {
 
 	if (strpos($url, "code") == false){
 		echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-		echo '<span style="font-weight: 400; font-style: italic;">Dieser Registrierungslink ist ungültig.</span></h5>';
+		echo '<span style="font-weight: 400; font-style: italic; color: #504d4d;">Dieser Registrierungslink ist ungültig.</span></h5>';
 		die();
 	}
 
@@ -61,7 +61,7 @@ if( is_page(24)) {
 				
 				if ($v == 0) {
 					echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-					echo '<span style="font-weight: 400; font-style: italic;">Dieser Registrierungslink ist ungültig.</span></h5>';
+					echo '<span style="font-weight: 400; font-style: italic;color: #504d4d;">Dieser Registrierungslink ist ungültig.</span></h5>';
 					die();
 				}
 			}
