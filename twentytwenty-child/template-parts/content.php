@@ -21,80 +21,24 @@ function getAddress() {
     return 'https'.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
 
-if( is_page(24)) {
+/********************* Invitations A - Abend des 13.05.2020 im AA  ******************/
+if ( is_page(24)) {	
+	/****** Checks if word "Code" exists in the URL
+	/****** Takes 6 chars after the word "code"
+	/****** Checks if the code is in the database 
+	/****** If it is in the database then it checks if has_been_sent=0  */	 
+	require (get_stylesheet_directory().'/code-validation/invitations-a.php');
+} 
 
-	$url=getAddress();
+/********************* Invitations B - Teilnahme an der gesamten Konferenz ************/
+if ( is_page(107)) {	 
+	require (get_stylesheet_directory().'/code-validation/invitations-b.php');
+} 
 
-	if (strpos($url, "code") == false){
-		echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-		echo '<span style="font-weight: 400; font-style: italic; color: #504d4d;">Dieser Registrierungslink ist ungültig</span></h5>';
-		die();
-	}
-
-	$id = substr($url, strpos($url, "code") + strlen("code"), 6);
-
-		class TableRows extends RecursiveIteratorIterator {
-			function __construct($it) {
-				parent::__construct($it, self::LEAVES_ONLY);
-			}
-		} 
-		$servername = "localhost";
-		$username = "dbo819600357";
-		$password = "rln9H78B?RtHdUqVHjwS1";
-		$dbname = "db819600357"; 
-	/* 	$username = "root";
-		$password = "root";
-		$dbname = "sharedhistory"; */
-
-		//Check if code exists in the db
-
-		try {
-			$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$stmt = $conn->prepare("SELECT EXISTS(SELECT * FROM Invitations WHERE code='$id')");
-			
-			$stmt->execute();
-	
-			// set the resulting array to associative
-			$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-			foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-				if ($v == 0) {
-					echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-					echo '<span style="font-weight: 400; font-style: italic;color: #504d4d;">Dieser Registrierungslink ist ungültig</span></h5>';
-					die();
-				}
-			}
-		}
-		catch(PDOException $e) {
-			echo "Error: " . $e->getMessage();
-		}
-		$conn = null;
-
-		//If it exists then update has_been_sent
-		try {
-			$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$stmt = $conn->prepare("SELECT has_been_sent FROM Invitations WHERE code='$id' ");
-			$stmt->execute();
-
-			// set the resulting array to associative
-			$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-			foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-				if ($v == 1) {
-					echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-					echo '<span style="font-weight: 400; font-style: italic;">Dieser Registrierungslink ist ungültig</span></h5>';
-					die();
-				}
-			}
-		}
-		catch(PDOException $e) {
-			echo "Error: " . $e->getMessage();
-		}
-		$conn = null;
-
-}
-
-?>
+/********************* Invitations C - Abendveranstaltung am 14.05.2020 ************/
+if ( is_page(109)) {		 
+	require (get_stylesheet_directory().'/code-validation/invitations-c.php');	
+} ?>
 
 
 
