@@ -64,6 +64,12 @@ body.no-scroll {
     overflow: hidden;
 }
 
+body.page-id-126 {
+    .organisers-partners-footer {
+        display: none;
+    }
+}
+
 .color-accent, .color-accent-hover:hover, .color-accent-hover:focus, :root .has-accent-color, .has-drop-cap:not(:focus):first-letter, .wp-block-button.is-style-outline, a {
     color: #1e73be !important;
 }

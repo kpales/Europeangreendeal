@@ -25,7 +25,7 @@ function my_theme_enqueue_styles() {
  
     $parent_style = 'parent-style'; // This is 'twentytwenty-style' for the Twenty Twenty theme.
  
-    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css?v=33qaphf2r' );
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css?v=33qasphf2r' );
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/css/app.css',
         array( $parent_style ),

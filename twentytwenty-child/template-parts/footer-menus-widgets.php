@@ -23,7 +23,7 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 
 	<div class="footer-nav-widgets-wrapper header-footer-group">
 
-		<div class="footer-inner section-inner">
+		<div class="footer-inner section-inner organisers-partners-footer">
 
 			<?php
 
@@ -90,7 +90,7 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 			<?php if ( $has_sidebar_1 || $has_sidebar_2 ) { ?>
 
 				<aside class="footer-widgets-outer-wrapper" role="complementary">
-				<h2 class="widget-title subheading heading-size-3">Partners &amp; Organisers</h2>
+				<h2 class="widget-title subheading heading-size-3">Organizers & Partners</h2>
 					<div class="footer-widgets-wrapper">
 						
 
