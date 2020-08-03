@@ -16,7 +16,9 @@ $( document ).ready(function() {
             }
 
             var speakerName = speakerUrl.split("/speaker/")[1];
-            var preUrl = "http://localhost:8888/shared-history/wp-json/wp/v2/posts/?slug=";
+            var getUrl = window.location;
+            var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+            var preUrl = baseUrl + "/wp-json/wp/v2/posts/?slug=";
             var jsonUrl = preUrl + speakerName;
             $.getJSON( jsonUrl, function( data ) {
                 var title = data[0].title.rendered;
