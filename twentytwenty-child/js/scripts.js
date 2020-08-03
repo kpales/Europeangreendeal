@@ -26,9 +26,9 @@ $( document ).ready(function() {
                 $('body').addClass('no-scroll');
 
                 if (imageUrl) {
-                    $('body').append('<div class="speaker-popup"><img src="' + imageUrl + '"class="speaker-popup__foto"><div class="speaker-popup__content"><h4 style="margin: 0">' + title + '</h4>'+  content + '</div><svg class="speaker-popup__close" width="16" height="16" viewBox="0 0 16 16"><line x1="2" x2="14" y1="14" y2="2"></line><line x1="14" x2="2" y1="14" y2="2"></line></svg></div>');
+                    $('body').append('<div class="speaker-popup"><img src="' + imageUrl + '"class="speaker-popup__foto"><div class="speaker-popup__content"><h4 style="margin-top: 0">' + title + '</h4>'+  content + '</div><svg class="speaker-popup__close" width="16" height="16" viewBox="0 0 16 16"><line x1="2" x2="14" y1="14" y2="2"></line><line x1="14" x2="2" y1="14" y2="2"></line></svg></div>');
                 } else {
-                    $('body').append('<div class="speaker-popup"><div class="speaker-popup__content"><h4 style="margin: 0">' + title + '</h4>'+  content + '</div><svg class="speaker-popup__close" width="16" height="16" viewBox="0 0 16 16"><line x1="2" x2="14" y1="14" y2="2"></line><line x1="14" x2="2" y1="14" y2="2"></line></svg></div>');
+                    $('body').append('<div class="speaker-popup"><div class="speaker-popup__content"><h4 style="margin-top: 0">' + title + '</h4>'+  content + '</div><svg class="speaker-popup__close" width="16" height="16" viewBox="0 0 16 16"><line x1="2" x2="14" y1="14" y2="2"></line><line x1="14" x2="2" y1="14" y2="2"></line></svg></div>');
                 }
                 
 
