@@ -8,7 +8,7 @@ $( document ).ready(function() {
 
     //Open Vitas as popups
     if ($('body').hasClass('page-id-124')) {
-        $(document).on('click', 'a', function(e) {
+        $(document).on('mouseover', 'a', function(e) {
             var speakerUrl = $(this).attr('href');
             if (speakerUrl.indexOf("/speaker/") > -1 ) {
                 e.preventDefault();
