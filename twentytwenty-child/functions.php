@@ -219,8 +219,16 @@ if( function_exists('acf_add_options_page') ) {
 add_filter('frm_notification_attachment', 'add_my_attachment', 10, 3);
 function add_my_attachment($attachments, $form, $args){
 //$args['entry'] includes the entry object
-if ( $args['email_key'] == 1277 ) { //change 1277 to the ID of your email notification
-  $attachments[] = ABSPATH . '/'.'wp-content/uploads/2015/02/filename.pdf'; //set the ABSOLUTE path to the image here
+
+
+if ( $args['email_key'] == 33 ) { //change 1277 to the ID of your email notification
+	$pdf_programme = get_field( 'pdf_programme', 'option' ); 
+	if ( $pdf_programme ) {
+		$programmePath =  $pdf_programme['url'];
+		$absProgrammePath = str_replace("https://shared-history.de/", "", $programmePath);
+
+		$attachments[] = ABSPATH . '/'. $absProgrammePath; //set the ABSOLUTE path to the image here
+	} 
 }
 return $attachments;
 }
