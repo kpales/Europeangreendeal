@@ -28,9 +28,13 @@
     background: white; 
     padding: 0.5rem; 
     transform: translate(-50%, -50%); 
-    display: flex;
+    display: none;
     padding: 1.5rem;
     width: 55%;
+
+    &--show {
+        display: flex;
+    }
 
 
     &__content {
