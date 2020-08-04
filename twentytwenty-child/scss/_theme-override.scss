@@ -28,12 +28,16 @@
     background: white; 
     padding: 0.5rem; 
     transform: translate(-50%, -50%); 
-    display: none;
+    display: flex;
     padding: 1.5rem;
     width: 55%;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    z-index: -1;
 
     &--show {
-        display: flex;
+        opacity: 1;   
+        z-index: 99;
     }
 
 
