@@ -33,7 +33,7 @@ function my_theme_enqueue_styles() {
 	);
 	
 	wp_enqueue_script('jquery1', '//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), true);
-    wp_enqueue_script( 'website-script', '/wp-content/themes/twentytwenty-child/js/scripts.js?v=33qapgzrf2', array(), '1.0.0', true );
+    wp_enqueue_script( 'website-script', '/wp-content/themes/twentytwenty-child/js/scripts.js?v=33qapguzrf2', array(), '1.0.0', true );
 }
 
 
