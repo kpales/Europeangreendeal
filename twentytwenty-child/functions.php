@@ -221,7 +221,7 @@ function add_my_attachment($attachments, $form, $args){
 //$args['entry'] includes the entry object
 
 
-if ( $args['email_key'] == 33 ) { //change 1277 to the ID of your email notification
+if ( $args['email_key'] == 33 || $args['email_key'] == 218 ) { //change 1277 to the ID of your email notification
 	$pdf_programme = get_field( 'pdf_programme', 'option' ); 
 	if ( $pdf_programme ) {
 		$programmePath =  $pdf_programme['url'];
@@ -230,5 +230,7 @@ if ( $args['email_key'] == 33 ) { //change 1277 to the ID of your email notifica
 		$attachments[] = ABSPATH . '/'. $absProgrammePath; //set the ABSOLUTE path to the image here
 	} 
 }
+
 return $attachments;
 }
+
