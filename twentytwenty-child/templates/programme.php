@@ -37,8 +37,7 @@ get_header();
 				<?php // The Loop   ?>            
 					<?php if ( $query->have_posts() ) {  
 						while ( $query->have_posts() ) {
-							$query->the_post(); 
-							the_title(); ?>
+							$query->the_post(); ?>
 							<div class="speaker-popup" data-href="<?php echo esc_url( get_permalink()); ?>">
 								<?php if ( has_post_thumbnail() ) { ?>
 									<img src="<?php esc_url(get_the_post_thumbnail_url('small')); ?>"class="speaker-popup__foto">
