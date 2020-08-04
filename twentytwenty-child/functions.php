@@ -202,29 +202,25 @@ function twentytwenty_sidebar_registration() {
 
 add_action( 'widgets_init', 'twentytwenty_sidebar_registration' );
 
+/**********  Theme Settings */
 
-/***************  Add images to rest api */
-
-function ws_register_images_field() {
-    register_rest_field( 
-        'post',
-        'images',
-        array(
-            'get_callback'    => 'ws_get_images_urls',
-            'update_callback' => null,
-            'schema'          => null,
-        )
-    );
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> 'Programme',
+		'menu_title'	=> 'Programme',
+		'menu_slug' 	=> 'options',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+  ));		
 }
 
-add_action( 'rest_api_init', 'ws_register_images_field' );
 
-function ws_get_images_urls( $object, $field_name, $request ) {
-    $medium = wp_get_attachment_image_src( get_post_thumbnail_id( $object->id ), 'medium' );
-    $medium_url = $medium['0'];
-
-    return array(
-        'medium' => $medium_url,
-    );
+/******** Attach Programme as .pdf file to the confirmation email */
+add_filter('frm_notification_attachment', 'add_my_attachment', 10, 3);
+function add_my_attachment($attachments, $form, $args){
+//$args['entry'] includes the entry object
+if ( $args['email_key'] == 1277 ) { //change 1277 to the ID of your email notification
+  $attachments[] = ABSPATH . '/'.'wp-content/uploads/2015/02/filename.pdf'; //set the ABSOLUTE path to the image here
 }
-
+return $attachments;
+}

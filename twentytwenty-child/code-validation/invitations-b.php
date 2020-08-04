@@ -2,7 +2,6 @@
 
 if (strpos($url, "code") == false){
     echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-    echo '<span style="font-weight: 400; font-style: italic; color: #504d4d;">Dieser Registrierungslink ist ungültig</span></h5>';
     die();
 }
 
@@ -35,7 +34,6 @@ $id = substr($url, strpos($url, "code") + strlen("code"), 6);
         foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
             if ($v == 0) {
                 echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-                echo '<span style="font-weight: 400; font-style: italic;color: #504d4d;">Dieser Registrierungslink ist ungültig</span></h5>';
                 die();
             }
         }
@@ -57,7 +55,6 @@ $id = substr($url, strpos($url, "code") + strlen("code"), 6);
         foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
             if ($v == 1) {
                 echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-                echo '<span style="font-weight: 400; font-style: italic;">Dieser Registrierungslink ist ungültig</span></h5>';
                 die();
             }
         }
