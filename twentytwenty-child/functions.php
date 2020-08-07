@@ -234,3 +234,24 @@ if ( $args['email_key'] == 33 || $args['email_key'] == 218 ) { //change 1277 to 
 return $attachments;
 }
 
+
+
+/****************** add_action('acf/init', 'my_acf_init_block_types'); */
+function my_acf_init_block_types() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'panelists',
+            'title'             => __('Panelists'),
+            'description'       => __('panelist Tiles'),
+            'render_template'   => 'template-parts/blocks/testimonial/testimonial.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-users',
+            'keywords'          => array( 'panelists', 'tiles' ),
+        ));
+    }
+} 
+
