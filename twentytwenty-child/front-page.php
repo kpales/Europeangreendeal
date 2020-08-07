@@ -1,5 +1,5 @@
 
-<div class="hompage-wrapper">
+<div class="homepage-wrapper">
   <div class="homepage-wrapper__image">
     <?php the_post_thumbnail( 'large' ); ?> 
   </div> 
