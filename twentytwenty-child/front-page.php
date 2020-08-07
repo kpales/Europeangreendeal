@@ -3,7 +3,7 @@
 
 <div class="homepage-wrapper">
   <div class="homepage-wrapper__image">
-    <?php the_post_thumbnail( 'large' ); ?> 
+    <?php the_post_thumbnail( 'twentytwenty-fullscreen' ); ?> 
   </div> 
 </div>
 
