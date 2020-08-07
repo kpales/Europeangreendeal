@@ -1,4 +1,3 @@
-<?php get_header(); ?>
 
 <div class="cover-page">
   <div class="cover-page--font">
@@ -13,6 +12,3 @@ setTimeout(function(){
 }, 2000);
 
 </script>
-
-
-<?php get_footer(); ?>
