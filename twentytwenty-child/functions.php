@@ -255,7 +255,7 @@ function register_panelists_block() {
 			// 'align'				=> 'wide',
 			'render_template'		=> 'template-parts/blocks/panelists/panelists.php',
 			// 'render_callback'	=> 'panelists_block_render_callback',
-			// 'enqueue_style' 		=> get_template_directory_uri() . '/template-parts/blocks/panelists/panelists.css',
+			 'enqueue_style' 		=> get_template_directory_uri() . '/template-parts/blocks/panelists/panelists.css',
 			// 'enqueue_script' 	=> get_template_directory_uri() . '/template-parts/blocks/panelists/panelists.js',
 			// 'enqueue_assets' 	=> 'panelists_block_enqueue_assets',
 		));
