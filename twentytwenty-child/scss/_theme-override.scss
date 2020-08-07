@@ -86,7 +86,15 @@ a {
     text-decoration: underline;
 }
 
+.page-id-126 {
 
+    @include from_768 {
+        figure.wp-block-image.alignwide.size-large {
+            height: 118px;
+        }
+    }
+    
+}
 
 
 
