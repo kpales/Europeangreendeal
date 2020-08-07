@@ -237,21 +237,30 @@ return $attachments;
 
 
 /****************** add_action('acf/init', 'my_acf_init_block_types'); */
-function my_acf_init_block_types() {
+add_action( 'acf/init', 'register_panelists_block' );
+function register_panelists_block() {
 
-    // Check function exists.
-    if( function_exists('acf_register_block_type') ) {
+	if ( function_exists( 'acf_register_block_type' ) ) {
 
-        // register a testimonial block.
-        acf_register_block_type(array(
-            'name'              => 'panelists',
-            'title'             => __('Panelists'),
-            'description'       => __('panelist Tiles'),
-            'render_template'   => 'template-parts/blocks/testimonial/testimonial.php',
-            'category'          => 'formatting',
-            'icon'              => 'admin-users',
-            'keywords'          => array( 'panelists', 'tiles' ),
-        ));
-    }
-} 
+		// Register panelists block
+		acf_register_block_type( array(
+			'name' 					=> 'panelists',
+			'title' 				=> __( 'Panelists' ),
+			'description' 			=> __( 'A custom panelists block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'admin-users',
+			'keywords'				=> array( 'panelists' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			// 'align'				=> 'wide',
+			'render_template'		=> 'template-parts/blocks/panelists/panelists.php',
+			// 'render_callback'	=> 'panelists_block_render_callback',
+			// 'enqueue_style' 		=> get_template_directory_uri() . '/template-parts/blocks/panelists/panelists.css',
+			// 'enqueue_script' 	=> get_template_directory_uri() . '/template-parts/blocks/panelists/panelists.js',
+			// 'enqueue_assets' 	=> 'panelists_block_enqueue_assets',
+		));
+
+	}
+
+}
 

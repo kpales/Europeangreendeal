@@ -115,6 +115,49 @@ a {
     }
 }
 
+.sh-container {
+}
+
+.sh-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sh-col-3 {
+    width: 100%;
+    position: relative;
+
+    @include from_1024 {
+        width: 25%;
+    }
+    @include from_1200 {
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+    }
+  }
+
+  .panelist-tile {
+      border: 5px solid white;
+        opacity: .7;
+
+      &:hover {
+          opacity: 1;
+      }
+  }
+
+  .panelist-name {
+      position: absolute;
+      bottom: 5px;
+      background-color: white;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: calc(100% - 10px);
+  }
+
+
 
 
 
