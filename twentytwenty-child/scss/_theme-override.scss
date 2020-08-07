@@ -91,6 +91,12 @@ a {
     @include from_768 {
         figure.wp-block-image.alignwide.size-large {
             height: 118px;
+
+            & img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
     }
     
