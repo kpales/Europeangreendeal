@@ -1,7 +1,7 @@
 
-<div class="cover-page">
-  <div class="cover-page--font">
-            Shared History
+<div class="hompage-wrapper">
+  <div class="homepage-wrapper__image">
+    <?php the_post_thumbnail( 'large' ); ?> 
   </div> 
 </div>
 
