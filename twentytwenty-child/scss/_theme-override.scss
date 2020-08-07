@@ -140,7 +140,11 @@ a {
 
   .panelist-tile {
       border: 5px solid white;
+      cursor: pointer;
+
+      @include from_102g {
         opacity: .7;
+    }
 
       &:hover {
           opacity: 1;
