@@ -1,3 +1,5 @@
+<?php wp_head(); ?>
+
 
 <div class="homepage-wrapper">
   <div class="homepage-wrapper__image">
