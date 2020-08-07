@@ -59,7 +59,7 @@ if ( ! empty( $block['align'] ) ) {
                     <?php }  else if ($count%4 == 2 )  { ?>
                         <div class="sh-col-3 panelist-tile"></div>
                         <div class="sh-col-3 panelist-tile"></div>
-                    <?php }  else if ($count%4 == 1 )  { ?>
+                    <?php }  else if ($count%4 == 3 )  { ?>
                         <div class="sh-col-3 panelist-tile"></div>
                      <?php }  ?>
                 <?php }  ?>
