@@ -7,8 +7,8 @@
 
 <script>
 
-setTimeout(function(){ 
+/* setTimeout(function(){ 
   window.location.href = '<?php echo esc_url( get_permalink(114)); ?>'; 
-}, 2000);
+}, 2000); */
 
 </script>
