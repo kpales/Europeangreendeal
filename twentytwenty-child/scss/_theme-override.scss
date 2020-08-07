@@ -143,7 +143,7 @@ a {
       cursor: pointer;
 
       @include from_102g {
-        opacity: .7;
+        opacity: .7; 
     }
 
       &:hover {
