@@ -23,4 +23,20 @@ $( document ).ready(function() {
         });        
         
     }
+    if ($('body').hasClass('page-id-251')) {
+        $(document).on('click', 'a', function(e) {
+            var speakerUrl = $(this).attr('href');
+            if (speakerUrl.indexOf("/speaker/") > -1 ) {
+                e.preventDefault();
+                $('body').addClass('no-scroll');
+                $('.speaker-popup[data-href="' + speakerUrl + '"]').addClass('speaker-popup--show');            
+            }
+        });
+
+        $(document).on('click', '.speaker-popup__close', function(e) {
+            $('.speaker-popup').removeClass('speaker-popup--show');
+            $('body').removeClass('no-scroll');
+        });        
+        
+    }
 });

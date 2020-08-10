@@ -32,38 +32,75 @@ if ( ! empty( $block['align'] ) ) {
 	}
 </style>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
-    <?php if ( have_rows( 'panelists' ) ) : ?>
-        <div class="sh-container">
-            <div class="sh-row">
-                <?php while ( have_rows( 'panelists' ) ) : the_row(); ?>
-                    <div class="sh-col-3 panelist-tile">
-                        <?php $image = get_sub_field( 'image' ); ?>
-                        <?php if ( $image ) : ?>
-                            <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-                        <?php endif; ?>
-                        <div class="panelist-name"><?php echo get_sub_field( 'name' ); ?></div>
+<?php $args = array (
+				'post_type'=> 'post',
+				'post_status' => 'publish',
+				'category_name' => 'speaker',
+				'posts_per_page' => -1,
+                );
 
-                    </div>
-                    <?php if (get_row_index()%4 == 0)  { ?> 
-                        </div> <!-- end row -->
-                        <div class="sh-row"> <!-- start row -->
-                    <?php } ?> 
-                <?php endwhile; ?>
-                <?php  $count = count(get_field('panelists')); ?>
-                <?php if ($count%4 !==0 ) {  ?>
-                    <?php if ($count%4 == 1 ) {  ?>
-                        <div class="sh-col-3 panelist-tile"></div>
-                        <div class="sh-col-3 panelist-tile"></div>
-                        <div class="sh-col-3 panelist-tile"></div>
-                    <?php }  else if ($count%4 == 2 )  { ?>
-                        <div class="sh-col-3 panelist-tile"></div>
-                        <div class="sh-col-3 panelist-tile"></div>
-                    <?php }  else if ($count%4 == 3 )  { ?>
-                        <div class="sh-col-3 panelist-tile"></div>
-                     <?php }  ?>
-                <?php }  ?>
-	<?php else : ?>
-		<?php // no rows found ?>
-	<?php endif; ?>
-</div>
+$query = new WP_Query( $args ); 
+$count = $query->post_count; ?>
+
+    <?php // The Loop   ?>            
+        <?php if ( $query->have_posts() ) {  ?>
+            <div class="sh-container">
+                <div class="sh-row">
+                <?php while ( $query->have_posts() ) {
+                    $query->the_post(); ?>
+                    <a class="sh-col-3 panelist-tile" href="<?php echo esc_url( get_permalink()); ?>">
+                        <?php if ( has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail(); ?> 
+                        <?php endif; ?>
+                        <div class="panelist-name"><?php the_title(); ?></div>
+                    </a>
+                <?php if (get_row_index()%4 == 0)  { ?> 
+                    </div> <!-- end row -->
+                    <div class="sh-row"> <!-- start row -->
+                <?php } ?> 
+                    <?php if ($count%4 !==0 ) {  ?>
+                        <?php if ($count%4 == 1 ) {  ?>
+                            <div class="sh-col-3 panelist-tile"></div>
+                            <div class="sh-col-3 panelist-tile"></div>
+                            <div class="sh-col-3 panelist-tile"></div>
+                        <?php }  else if ($count%4 == 2 )  { ?>
+                            <div class="sh-col-3 panelist-tile"></div>
+                            <div class="sh-col-3 panelist-tile"></div>
+                        <?php }  else if ($count%4 == 3 )  { ?>
+                            <div class="sh-col-3 panelist-tile"></div>
+                        <?php }  
+                    }
+            } // end while
+        } // end if
+
+        // Restore original Post Data
+        wp_reset_postdata();
+    ?> 
+
+<?php $args = array (
+				'post_type'=> 'post',
+				'post_status' => 'publish',
+				'category_name' => 'speaker',
+				'posts_per_page' => -1,
+				);
+
+            $query = new WP_Query( $args ); ?>
+				<?php // The Loop   ?>            
+					<?php if ( $query->have_posts() ) {  
+						while ( $query->have_posts() ) {
+							$query->the_post(); ?>
+							<div class="speaker-popup" data-href="<?php echo esc_url( get_permalink()); ?>">
+									<img src="<?php the_post_thumbnail_url('small');  ?>"class="speaker-popup__foto">	
+								<div class="speaker-popup__content">
+									<h4 style="margin-top: 0"> <?php the_title(); ?></h4>
+									<?php the_content(); ?>
+								</div>
+									<svg class="speaker-popup__close" width="16" height="16" viewBox="0 0 16 16"><line x1="2" x2="14" y1="14" y2="2"></line><line x1="14" x2="2" y1="14" y2="2"></line></svg>
+							</div> <?php 
+						} // end while
+					} // end if
+
+					// Restore original Post Data
+					wp_reset_postdata();
+				?> 
+

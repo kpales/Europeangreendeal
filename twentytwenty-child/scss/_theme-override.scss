@@ -65,6 +65,7 @@
         height: auto;
         background-color: grey;
         margin-bottom: 1rem; 
+        align-self: flex-start;
     }
 }
 
@@ -143,7 +144,7 @@ a {
       cursor: pointer;
 
       @include from_1025 {
-        opacity: .7; 
+        opacity: .8; 
     }
 
       &:hover {

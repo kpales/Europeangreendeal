@@ -39,9 +39,7 @@ get_header();
 						while ( $query->have_posts() ) {
 							$query->the_post(); ?>
 							<div class="speaker-popup" data-href="<?php echo esc_url( get_permalink()); ?>">
-								<?php if ( has_post_thumbnail() ) { ?>
-									<img src="<?php esc_url(get_the_post_thumbnail_url('small')); ?>"class="speaker-popup__foto">
-								<?php } ?>
+									<img src="<?php the_post_thumbnail_url('small');  ?>"class="speaker-popup__foto">	
 								<div class="speaker-popup__content">
 									<h4 style="margin-top: 0"> <?php the_title(); ?></h4>
 									<?php the_content(); ?>

@@ -11,6 +11,6 @@
 
  setTimeout(function(){ 
   window.location.href = '<?php echo esc_url( get_permalink(114)); ?>'; 
-}, 2000); 
+}, 1200); 
 
 </script>
