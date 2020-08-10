@@ -34,6 +34,8 @@
     opacity: 0;
     transition: opacity .3s ease-in-out;
     z-index: -1;
+    max-height: 80vh;
+    overflow-x: scroll;
 
     &--show {
         opacity: 1;   
