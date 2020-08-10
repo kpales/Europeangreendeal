@@ -166,6 +166,12 @@ a {
       width: calc(100% - 10px);
   }
 
+@include from_768 {
+    .page-id-114 .site-logo img {
+        max-height: 15rem;
+    }
+}
+
 
 
 
