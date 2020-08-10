@@ -144,6 +144,7 @@ a {
   .panelist-tile {
       border: 5px solid white;
       cursor: pointer;
+      background-color: #1e73be;
 
       @include from_1025 {
         opacity: .8; 
