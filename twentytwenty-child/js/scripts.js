@@ -9,6 +9,7 @@ $( document ).ready(function() {
     //Open Vitas as popups
     if ($('body').hasClass('page-id-124')) {
         $(document).on('click', 'a', function(e) {
+            $('.speaker-popup').removeClass('speaker-popup--show');
             var speakerUrl = $(this).attr('href');
             if (speakerUrl.indexOf("/speaker/") > -1 ) {
                 e.preventDefault();
@@ -25,6 +26,7 @@ $( document ).ready(function() {
     }
     if ($('body').hasClass('page-id-251')) {
         $(document).on('click', 'a', function(e) {
+            $('.speaker-popup').removeClass('speaker-popup--show');
             var speakerUrl = $(this).attr('href');
             if (speakerUrl.indexOf("/speaker/") > -1 ) {
                 e.preventDefault();
