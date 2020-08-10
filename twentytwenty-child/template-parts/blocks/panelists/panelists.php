@@ -54,10 +54,12 @@ $count = $query->post_count; ?>
                         <?php endif; ?>
                         <div class="panelist-name"><?php the_title(); ?></div>
                     </a>
-                <?php if (get_row_index()%4 == 0)  { ?> 
-                    </div> <!-- end row -->
-                    <div class="sh-row"> <!-- start row -->
+                    <?php if (get_row_index()%4 == 0)  { ?> 
+                        </div> <!-- end row -->
+                        <div class="sh-row"> <!-- start row -->
+                    <?php } ?> 
                 <?php } ?> 
+                
                     <?php if ($count%4 !==0 ) {  ?>
                         <?php if ($count%4 == 1 ) {  ?>
                             <div class="sh-col-3 panelist-tile"></div>
@@ -69,7 +71,7 @@ $count = $query->post_count; ?>
                         <?php }  else if ($count%4 == 3 )  { ?>
                             <div class="sh-col-3 panelist-tile"></div>
                         <?php }  
-                    }
+                   
             } // end while
         } // end if
 
