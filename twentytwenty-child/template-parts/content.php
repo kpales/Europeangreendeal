@@ -21,8 +21,8 @@ function getAddress() {
     return 'https'.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
 
-/********************* Invitations A - Abend des 13.05.2020 im AA  ******************/
-if ( is_page(24)) {	
+/********************* Invitations ******************/
+if ( is_page(114)) {	
 	/****** Checks if word "Code" exists in the URL
 	/****** Takes 6 chars after the word "code"
 	/****** Checks if the code is in the database 
@@ -30,18 +30,7 @@ if ( is_page(24)) {
 	require (get_stylesheet_directory().'/code-validation/invitations-a.php');
 } 
 
-/********************* Invitations B - Teilnahme an der gesamten Konferenz ************/
-if ( is_page(107)) {	 
-	require (get_stylesheet_directory().'/code-validation/invitations-b.php');
-} 
-
-/********************* Invitations C - Abendveranstaltung am 14.05.2020 ************/
-if ( is_page(109)) {		 
-	require (get_stylesheet_directory().'/code-validation/invitations-c.php');	
-} ?>
-
-
-
+?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
