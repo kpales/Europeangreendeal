@@ -13,7 +13,7 @@ $id = substr($url, strpos($url, "code") + strlen("code"), 6);
             parent::__construct($it, self::LEAVES_ONLY);
         }
     } 
-    $servername = "localhost";
+    $servername = "db5000760556.hosting-data.io";
     $username = "dbu887655";
     $password = "dhLC5R3a52RPlcOb5lwf!";
     $dbname = "dbs689668"; 
