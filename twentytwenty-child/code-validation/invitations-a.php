@@ -2,7 +2,7 @@
 
 if (strpos($url, "code") == false){
     echo '<h5 style="margin-left: 3.4rem">Dieser Registrierungslink ist nicht gültig<br/>';
-    echo '<span class="en-lang" style="margin-left: 3.4rem">This registration link is not valid</span></h5>';
+    echo '<span class="en-lang">This registration link is not valid</span></h5>';
     die();
 }
 
@@ -34,8 +34,8 @@ $id = substr($url, strpos($url, "code") + strlen("code"), 6);
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
             if ($v == 0) {
-                echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-                echo '<span class="en-lang" style="margin-left: 3.4rem">This registration link is not valid</span></h5>';
+                echo '<h5 style="margin-left: 3.4rem">Dieser Registrierungslink ist nicht gültig<br/>';
+                echo '<span class="en-lang">This registration link is not valid</span></h5>';
 
                 die();
             }
@@ -57,8 +57,8 @@ $id = substr($url, strpos($url, "code") + strlen("code"), 6);
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
             if ($v == 1) {
-                echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
-                echo '<span class="en-lang" style="margin-left: 3.4rem">This registration link is not valid</span></h5>';
+                echo '<h5 style="margin-left: 3.4rem">Dieser Registrierungslink ist nicht gültig<br/>';
+                echo '<span class="en-lang">This registration link is not valid</span></h5>';
 
                 die();
             }
