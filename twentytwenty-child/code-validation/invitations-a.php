@@ -1,7 +1,8 @@
 <?php $url=getAddress();
 
 if (strpos($url, "code") == false){
-    echo '<h5 style="margin-left: 3.4rem">This registration link is not valid<br/>';
+    echo '<h5 style="margin-left: 3.4rem">Dieser Registrierungslink ist nicht gültig<br/>';
+    echo '<h5 class="en-lang" style="margin-left: 3.4rem">This registration link is not valid<br/>';
     die();
 }
 
@@ -13,9 +14,9 @@ $id = substr($url, strpos($url, "code") + strlen("code"), 6);
         }
     } 
     $servername = "localhost";
-    $username = "dbo819600357";
-    $password = "rln9H78B?RtHdUqVHjwS1";
-    $dbname = "db819600357"; 
+    $username = "dbu887655";
+    $password = "dhLC5R3a52RPlcOb5lwf!";
+    $dbname = "dbs689668"; 
 /* 	$username = "root";
     $password = "root";
     $dbname = "sharedhistory"; */
