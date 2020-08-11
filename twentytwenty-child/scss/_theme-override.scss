@@ -1,3 +1,34 @@
+@font-face {
+    font-family: 'BundesSans-Medium';
+    src: url("../assets/BundesSans/BundesSans-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'BundesSans-Regular';
+    src: url("../assets/BundesSans/BundesSans-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'BundesSans-RegularItalic';
+    src: url("../assets/BundesSans/BundesSans-RegularItalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'BundesSans-Bold';
+    src: url("../assets/BundesSans/BundesSans-Bold.otf") format("opentype");
+}
+
+body,
+.body {
+    font-family: 'BundesSans-Regular';
+}
+
+h1,h2, h3, h4 {
+    font-family: 'BundesSans-Bold' !important;
+
+}
+
+
 .header-inner .toggle.mobile-search-toggle, .header-inner .search-toggle  {
     display: none;
 }
@@ -171,6 +202,22 @@ a {
         max-height: 15rem;
     }
 }
+
+
+span.en-lang {
+    font-style: italic;
+    color: rgb(106, 106, 106);
+    color: #5289c0;
+    font-weight: 400;
+    padding-left: .5rem;
+    font-size: 1.6rem;
+}
+
+span.en-lang-separator {
+    color: midnightblue;
+    opacity: 0;
+}
+
 
 
 
