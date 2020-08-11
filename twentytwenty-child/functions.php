@@ -96,14 +96,11 @@ function copy_into_my_table($entry_id, $form_id){
     $code = $_POST['item_meta'][38];
     echo $code;
   
-    $servername = "localhost";
-    $username = "dbo819600357";
-		$password = "rln9H78B?RtHdUqVHjwS1";
-		$dbname = "db819600357"; 
-		/*$username = "root";
-		$password = "root";
-		$dbname = "sharedhistory";*/
-
+    $servername = "db5000760556.hosting-data.io";
+    $username = "dbu887655";
+		$password = "dhLC5R3a52RPlcOb5lwf!";
+		$dbname = "dbs689668"; 
+	
   try {
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
