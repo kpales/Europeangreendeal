@@ -20,7 +20,8 @@
 
 body,
 .body {
-    font-family: 'BundesSans-Regular';
+    font-family: 'BundesSans-Regular' !important;
+    background-color:skyblue !important;
 }
 
 h1,h2, h3, h4 {
@@ -223,6 +224,72 @@ span.en-lang-link {
 span.en-lang-separator {
     color: midnightblue;
     opacity: 0;
+}
+
+//aleš code
+#site-header{
+    padding: 20px 0 50px 10px;
+    margin-top: 20px;
+        .header-logo{
+            display: flex;
+            img{
+                height: 50px !important;
+            }
+        }
+
+}
+.title-headline{
+   .title{
+        font-size: 48px;
+        color:white;
+       margin-bottom:0;
+    }
+    .subtitle{
+        font-size: 32px;
+        color:white;
+
+    }
+}
+#site-content{
+    margin-top: 300px;
+    .container{
+        background-color:white;
+        padding: 25px;
+    }
+}
+body{
+    background-image: url("https://european-standards-and-green-deal.de/wp-content/uploads/2020/08/kv-background.jpg");
+}
+#site-footer{
+    margin-top: 0 !important;
+    border:0;
+    background-color:#e5edf2 !important;
+    padding: 18px 30px 10px !important;
+
+    .footer-sites{
+        margin-bottom:18px;
+        a{
+            margin-right: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            color:#02446e !important;
+        }
+    }
+}
+.to-the-top{
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    z-index: 3;
+    i{
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 25px;
+        color: #fff !important;
+        background-color: #33363b;
+        padding: 5px;
+    }
 }
 
 

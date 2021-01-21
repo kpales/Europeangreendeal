@@ -41,7 +41,7 @@ get_header();
 							<div class="speaker-popup" data-href="<?php echo esc_url( get_permalink()); ?>">
 									<img src="<?php the_post_thumbnail_url('small');  ?>"class="speaker-popup__foto">	
 								<div class="speaker-popup__content">
-									<h4 style="margin-top: 0"> <?php the_title(); ?></h4>
+									
 									<?php the_content(); ?>
 								</div>
 									<svg class="speaker-popup__close" width="16" height="16" viewBox="0 0 16 16"><line x1="2" x2="14" y1="14" y2="2"></line><line x1="14" x2="2" y1="14" y2="2"></line></svg>

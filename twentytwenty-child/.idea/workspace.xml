@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a988c28d-d4ad-4a5a-ba32-385a4717c9c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/code-validation/invitations-a.php" beforeDir="false" afterPath="$PROJECT_DIR$/code-validation/invitations-a.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_theme-override.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_theme-override.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/entry-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/entry-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/programme.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/programme.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/assets/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/assets/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/classes/class-twentytwenty-customize.php" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/classes/class-twentytwenty-customize.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/classes/class-twentytwenty-non-latin-languages.php" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/classes/class-twentytwenty-non-latin-languages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/classes/class-twentytwenty-svg-icons.php" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/classes/class-twentytwenty-svg-icons.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/inc/starter-content.php" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/inc/starter-content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/inc/template-tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/inc/template-tags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/style-rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/style-rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/template-parts/entry-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/template-parts/entry-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twentytwenty/template-parts/footer-menus-widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/../twentytwenty/template-parts/footer-menus-widgets.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1gukY7LSNExXsqnfhjmgRQ4nI2r" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Bundeskonferenz/wp-content/themes/starter" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a988c28d-d4ad-4a5a-ba32-385a4717c9c4" name="Default Changelist" comment="" />
+      <created>1598971909987</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598971909987</updated>
+      <workItem from="1598971911010" duration="3342000" />
+      <workItem from="1598989763219" duration="709000" />
+      <workItem from="1599040901301" duration="2881000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599041605581">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599041605581" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599057673786">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599057673786" />
+  </component>
+</project>

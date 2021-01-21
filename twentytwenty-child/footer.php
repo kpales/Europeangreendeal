@@ -12,49 +12,29 @@
  */
 
 ?>
-			<footer id="site-footer" role="contentinfo" class="header-footer-group">
+<div class="container p-0">
 
-				<div class="section-inner">
+    <footer id="site-footer" role="contentinfo">
+        <div class="row mx-0">
+            <div class="footer-sites col-12">
+                <a target="blank"
+                   href="<?php echo esc_url(__(site_url('/imprint'))); ?>"><?php echo get_the_title(12); ?></a>
+                <a target="_blank"
+                   href="https://www.bmwi.de/Navigation/EN/Service/Privacy-Policy/privacy-policy.html">Privacy Policy</a>
+            </div><!-- .powered-by-wordpress -->
 
-					<div class="footer-credits">
 
-						<p class="footer-copyright">&copy;
-							<?php
-							echo date_i18n(
-								/* translators: Copyright date format, see https://secure.php.net/date */
-								_x( 'Y', 'copyright date format', 'twentytwenty' )
-							);
-							?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						</p><!-- .footer-copyright -->
 
-						<p class="powered-by-wordpress">
-							<a target="blank" href="<?php echo esc_url( __( site_url('/imprint') ) ); ?>"><?php echo get_the_title( 12 ); ?></a>
-							<a target="blank" href="<?php echo esc_url( __( site_url('/privacy-cookies') ) ); ?>"><?php echo get_the_title( 19 ); ?></a>
-						</p><!-- .powered-by-wordpress -->
 
-					</div><!-- .footer-credits -->
+        </div>
+    </footer><!-- #site-footer -->
 
-					<a class="to-the-top" href="#site-header">
-						<span class="to-the-top-long">
-							<?php
-							/* translators: %s: HTML character for up arrow */
-							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-							?>
-						</span><!-- .to-the-top-long -->
-						<span class="to-the-top-short">
-							<?php
-							/* translators: %s: HTML character for up arrow */
-							printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-							?>
-						</span><!-- .to-the-top-short -->
-					</a><!-- .to-the-top -->
+</div>
 
-				</div><!-- .section-inner -->
+<a class="to-the-top" href="#site-header">
+    <i class="fas fa-arrow-up"></i>
+</a><!-- .to-the-top -->
+<?php wp_footer(); ?>
 
-			</footer><!-- #site-footer -->
-
-		<?php wp_footer(); ?>
-
-	</body>
+</body>
 </html>

@@ -13,13 +13,10 @@ $id = substr($url, strpos($url, "code") + strlen("code"), 6);
             parent::__construct($it, self::LEAVES_ONLY);
         }
     } 
-    $servername = "db5000760556.hosting-data.io";
-    $username = "dbu887655";
+    $servername = "localhost";
+    $username = "dbo838938102";
     $password = "dhLC5R3a52RPlcOb5lwf!";
-    $dbname = "dbs689668"; 
-/* 	$username = "root";
-    $password = "root";
-    $dbname = "sharedhistory"; */
+    $dbname = "db838938102"; 
 
     //Check if code exists in the db
 
